@@ -1,26 +1,19 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Trade Enquiry Prototype</title><link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main class="wrap">
-<header><div><span class="eyebrow">PRIVATE PROTOTYPE · V1</span><h1>Trade Enquiries</h1><p>Turn a message into a job you can actually keep track of.</p></div><div class="badge"><b id="openCount">0</b><span>open jobs</span></div></header>
-<section class="panel">
-<label for="enquiry">Paste a customer enquiry</label>
-<textarea id="enquiry" placeholder="Hi, I'm Sarah. We're in Mumbles and need our old boiler replaced. My number is 07700 900123. Could you come and quote?"></textarea>
-<div class="actions"><button id="extract">Create job</button><button id="demo" class="secondary">Load demo enquiry</button></div>
-<p class="hint">V1 keeps everything on this device. No customer data is sent anywhere.</p>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TradeMate — Get a Quote</title><link rel="stylesheet" href="style.css"></head>
+<body><main class="wrap">
+<header><div><span class="eyebrow">TRADEMATE · DEMO</span><h1>Tell us about your job</h1><p>Answer a few quick questions so we can understand what you need.</p></div></header>
+<section class="panel" id="form">
+<div class="progress"><span id="bar"></span></div><p class="step" id="stepLabel">Step 1 of 5</p>
+<div class="screen" data-step="1"><h2>What can we help with?</h2><div class="choices" id="jobChoices">
+<button data-value="Boiler / Heating">Boiler / Heating</button><button data-value="Leak / Plumbing">Leak / Plumbing</button>
+<button data-value="Bathroom">Bathroom</button><button data-value="Radiators">Radiators</button><button data-value="Other">Something else</button></div></div>
+<div class="screen hidden" data-step="2"><h2>Tell us a little more</h2><label>What's happening?<textarea id="details" placeholder="For example: boiler won't fire, leaking pipe, bathroom refurbishment…"></textarea></label></div>
+<div class="screen hidden" data-step="3"><h2>How urgent is it?</h2><div class="choices" id="urgencyChoices"><button data-value="Emergency">Emergency</button><button data-value="This week">This week</button><button data-value="Within a month">Within a month</button><button data-value="Just getting prices">Just getting prices</button></div></div>
+<div class="screen hidden" data-step="4"><h2>Where is the job?</h2><label>Postcode<input id="postcode" placeholder="SA4 3XX" autocomplete="postal-code"></label><label>Photos (optional)<input id="photos" type="file" accept="image/*" multiple></label><p class="hint">Photos can help the tradesperson understand the job before contacting you.</p></div>
+<div class="screen hidden" data-step="5"><h2>How can we contact you?</h2><label>Name<input id="name" autocomplete="name"></label><label>Mobile number<input id="phone" type="tel" autocomplete="tel"></label><label>Email (optional)<input id="email" type="email" autocomplete="email"></label></div>
+<div class="nav"><button id="back" class="secondary hidden">Back</button><button id="next" class="hidden">Continue</button></div>
 </section>
-<section id="preview" class="panel hidden">
-<h2>Check the details</h2>
-<div class="grid">
-<label>Customer<input id="name"></label><label>Phone<input id="phone"></label>
-<label>Location<input id="location"></label><label>Status<select id="status"><option>New enquiry</option><option>Quote required</option><option>Booked</option><option>Completed</option><option>Declined</option></select></label>
-<label class="wide">Job<input id="job"></label><label class="wide">Next action<input id="action" value="Contact customer"></label>
-</div><button id="save">Save to dashboard</button>
-</section>
-<section class="jobs"><div class="jobsHead"><h2>Job dashboard</h2><button id="clear" class="textBtn">Clear demo data</button></div><div id="jobList" class="jobList"></div><p id="empty" class="empty">No enquiries yet. Paste one above to create your first job.</p></section>
-</main><script src="app.js"></script>
-</body></html>
+<section class="panel hidden" id="done"><span class="eyebrow">ENQUIRY READY</span><h2>Thanks — we've got what we need.</h2><p>This is what the tradesperson receives:</p><div id="summary" class="summary"></div><button id="restart" class="secondary">Start another enquiry</button></section>
+<p class="privacy">Prototype only. Your details stay on this device and are not submitted anywhere.</p>
+</main><script src="app.js"></script></body></html>
