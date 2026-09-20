@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trade Enquiry Prototype</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+<header><div><span class="eyebrow">PRIVATE PROTOTYPE · V1</span><h1>Trade Enquiries</h1><p>Turn a message into a job you can actually keep track of.</p></div><div class="badge"><b id="openCount">0</b><span>open jobs</span></div></header>
+<section class="panel">
+<label for="enquiry">Paste a customer enquiry</label>
+<textarea id="enquiry" placeholder="Hi, I'm Sarah. We're in Mumbles and need our old boiler replaced. My number is 07700 900123. Could you come and quote?"></textarea>
+<div class="actions"><button id="extract">Create job</button><button id="demo" class="secondary">Load demo enquiry</button></div>
+<p class="hint">V1 keeps everything on this device. No customer data is sent anywhere.</p>
+</section>
+<section id="preview" class="panel hidden">
+<h2>Check the details</h2>
+<div class="grid">
+<label>Customer<input id="name"></label><label>Phone<input id="phone"></label>
+<label>Location<input id="location"></label><label>Status<select id="status"><option>New enquiry</option><option>Quote required</option><option>Booked</option><option>Completed</option><option>Declined</option></select></label>
+<label class="wide">Job<input id="job"></label><label class="wide">Next action<input id="action" value="Contact customer"></label>
+</div><button id="save">Save to dashboard</button>
+</section>
+<section class="jobs"><div class="jobsHead"><h2>Job dashboard</h2><button id="clear" class="textBtn">Clear demo data</button></div><div id="jobList" class="jobList"></div><p id="empty" class="empty">No enquiries yet. Paste one above to create your first job.</p></section>
+</main><script src="app.js"></script>
+</body></html>
