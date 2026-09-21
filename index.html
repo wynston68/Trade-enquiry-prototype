@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TradeMate — Get a Quote</title><link rel="stylesheet" href="style.css"></head>
+<title>TradeMate — Plumbing Enquiry Demo</title><link rel="stylesheet" href="style.css"></head>
 <body><main class="wrap">
-<header><div><span class="eyebrow">TRADEMATE · DEMO</span><h1>Tell us about your job</h1><p>Answer a few quick questions so we can understand what you need.</p></div></header>
+<header><div><span class="eyebrow">TRADEMATE · PLUMBING DEMO</span><h1>Tell us about your job</h1><p>A few focused questions give the plumber the useful details before they call you back.</p></div></header>
 <section class="panel" id="form">
-<div class="progress"><span id="bar"></span></div><p class="step" id="stepLabel">Step 1 of 5</p>
-<div class="screen" data-step="1"><h2>What can we help with?</h2><div class="choices" id="jobChoices">
-<button data-value="Boiler / Heating">Boiler / Heating</button><button data-value="Leak / Plumbing">Leak / Plumbing</button>
-<button data-value="Bathroom">Bathroom</button><button data-value="Radiators">Radiators</button><button data-value="Other">Something else</button></div></div>
-<div class="screen hidden" data-step="2"><h2>Tell us a little more</h2><label>What's happening?<textarea id="details" placeholder="For example: boiler won't fire, leaking pipe, bathroom refurbishment…"></textarea></label></div>
-<div class="screen hidden" data-step="3"><h2>How urgent is it?</h2><div class="choices" id="urgencyChoices"><button data-value="Emergency">Emergency</button><button data-value="This week">This week</button><button data-value="Within a month">Within a month</button><button data-value="Just getting prices">Just getting prices</button></div></div>
-<div class="screen hidden" data-step="4"><h2>Where is the job?</h2><label>Postcode<input id="postcode" placeholder="SA4 3XX" autocomplete="postal-code"></label><label>Photos (optional)<input id="photos" type="file" accept="image/*" multiple></label><p class="hint">Photos can help the tradesperson understand the job before contacting you.</p></div>
-<div class="screen hidden" data-step="5"><h2>How can we contact you?</h2><label>Name<input id="name" autocomplete="name"></label><label>Mobile number<input id="phone" type="tel" autocomplete="tel"></label><label>Email (optional)<input id="email" type="email" autocomplete="email"></label></div>
+<div class="progress"><span id="bar"></span></div><p class="step" id="stepLabel">Step 1 of 6</p>
+<div class="screen" data-step="1"><h2>What do you need help with?</h2><div class="choices" id="jobChoices">
+<button data-value="Boiler / Heating">Boiler / Heating</button><button data-value="Leak / Plumbing">Leak / Plumbing</button><button data-value="Bathroom / Installation">Bathroom / Installation</button><button data-value="Other plumbing">Something else</button></div></div>
+<div class="screen hidden" data-step="2"><h2 id="smartTitle">A few useful details</h2><div id="smartQuestions"></div></div>
+<div class="screen hidden" data-step="3"><h2>Tell us anything else</h2><label>Job details<textarea id="details" placeholder="Anything else the plumber should know?"></textarea></label></div>
+<div class="screen hidden" data-step="4"><h2>How urgent is it?</h2><div class="choices" id="urgencyChoices"><button data-value="Emergency — now">Emergency — now</button><button data-value="Within 24–48 hours">Within 24–48 hours</button><button data-value="This week">This week</button><button data-value="Planning / quote">Planning / quote</button></div></div>
+<div class="screen hidden" data-step="5"><h2>Where is the job?</h2><label>Postcode<input id="postcode" placeholder="SA4 3XX" autocomplete="postal-code"></label><label>Photos (optional)<input id="photos" type="file" accept="image/*" multiple></label><p class="hint">Photos can help diagnose the job before the plumber contacts you.</p></div>
+<div class="screen hidden" data-step="6"><h2>How can we contact you?</h2><label>Name<input id="name" autocomplete="name"></label><label>Mobile number<input id="phone" type="tel" autocomplete="tel"></label><label>Email (optional)<input id="email" type="email" autocomplete="email"></label><label>Best time to contact<select id="contactTime"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option></select></label></div>
 <div class="nav"><button id="back" class="secondary hidden">Back</button><button id="next" class="hidden">Continue</button></div>
 </section>
-<section class="panel hidden" id="done"><span class="eyebrow">ENQUIRY READY</span><h2>Thanks — we've got what we need.</h2><p>This is what the tradesperson receives:</p><div id="summary" class="summary"></div><button id="restart" class="secondary">Start another enquiry</button></section>
-<p class="privacy">Prototype only. Your details stay on this device and are not submitted anywhere.</p>
+<section class="panel hidden" id="done"><span class="eyebrow">QUALIFIED ENQUIRY</span><h2>Ready for the plumber.</h2><p>Instead of several messages backwards and forwards, the tradesperson receives:</p><div id="summary" class="summary"></div><button id="restart" class="secondary">Start another enquiry</button></section>
+<p class="privacy">Prototype only. Details stay on this device and are not submitted anywhere.</p>
 </main><script src="app.js"></script></body></html>
